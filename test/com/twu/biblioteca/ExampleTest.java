@@ -12,10 +12,6 @@ import static org.junit.Assert.assertEquals;
 
 public class ExampleTest {
 
-    //Expected Messages:
-
-
-
     //Streams for testing the command line outputs:
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private final ByteArrayOutputStream errContent = new ByteArrayOutputStream();
@@ -45,6 +41,18 @@ public class ExampleTest {
         assertEquals( "Welcome to Biblioteca. Your one-stop-shop for great book titles in Bangalore.\n",
                 outContent.toString());
     }
+
+     @Test
+        public void testDisplayMenu() {
+            //Given: As a user
+
+            //When: I start the application
+            Prompter.displayMenuOptions();
+
+            //Then: I want to see a welcome message
+            assertEquals( " ======== Menu ======== \n 1 - View list of all books \n 2 - Quit",
+                    outContent.toString());
+        }
 
     @Test
     public void test() {
