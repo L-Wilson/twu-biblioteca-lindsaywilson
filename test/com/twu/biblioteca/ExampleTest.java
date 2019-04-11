@@ -78,7 +78,40 @@ public class ExampleTest {
 //        assertEquals( , );
 //    }
 
+        @Test
+        public void testBookAuthor() {
+            //Given: The Library contains books
+            Book book = new Book("T", "B", "C");
+            //When: The books should have title, author, year infos
+            book.getAuthor();
 
+            //Then: I want to see the menu options
+            assertEquals("T", "T");
+        }
+
+        @Test
+        public void testBookTitle() {
+            //Given: The Library contains books
+            Book book = new Book("T", "B", "C");
+            //When: The books should have title, author, year infos
+            book.getTitle();
+
+            //Then: I want to see the menu options
+            assertEquals("B", "B");
+
+        }
+
+        @Test
+        public void testBookYear() {
+            //Given: The Library contains books
+            Book book = new Book("T", "B", "C");
+            //When: The books should have title, author, year infos
+            book.getTitle();
+
+            //Then: I want to see the menu options
+            assertEquals("C", "C");
+
+        }
 
     @Test
     public void test() {
