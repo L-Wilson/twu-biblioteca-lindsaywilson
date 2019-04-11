@@ -14,7 +14,31 @@ public class Prompter {
                 menuOption1,
                 menuOption2
         );
-
     }
+
+
+    public static char promptForMenuOption() {
+        Scanner scanner = new Scanner(System.in);
+        String input;
+        char usersMenuChoice;
+        boolean isAcceptable = false;
+
+            do {
+                System.out.println("\n Please select your menu option by typing its number and pressing Enter: ");
+                input = scanner.nextLine();
+                usersMenuChoice = input.charAt(0);
+
+                if (usersMenuChoice == '1' || usersMenuChoice == '2') {
+                    isAcceptable = true;
+                } else {
+                    System.out.println("Invalid menu option.");
+                }
+            } while (!isAcceptable);
+
+        return usersMenuChoice;
+    }
+
+
+
 
 }

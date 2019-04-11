@@ -5,6 +5,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
@@ -43,16 +44,41 @@ public class ExampleTest {
     }
 
      @Test
-        public void testDisplayMenu() {
-            //Given: As a user
+     public void testDisplayMenu() {
+        //Given: As a user
 
-            //When: I start the application
-            Prompter.displayMenuOptions();
+        //When: I start the application
+        Prompter.displayMenuOptions();
 
-            //Then: I want to see a welcome message
-            assertEquals( " ======== Menu ======== \n 1 - View list of all books \n 2 - Quit",
-                    outContent.toString());
-        }
+        //Then: I want to see the menu options
+        assertEquals( " ======== Menu ======== \n 1 - View list of all books \n 2 - Quit",
+                outContent.toString());
+    }
+
+//    @Test
+//    public void testUserInput() {
+//        //Given: As a user
+//
+//        //When: I see the menu options
+//        Prompter.promptForMenuOption();
+//
+//        //Then: I want to be notified when I choose an invalid option
+//        assertEquals( "Invalid menu option.", "\n Please select your menu option by typing its number and pressing Enter: ");
+//
+//    }
+
+//    @Test
+//    public void testDisplayMenu() {
+//        //Given: As a user
+//
+//        //When: I choose the menu option "View list of all books"
+//        Prompter.displayAllBooks();
+//
+//        //Then: I want to see a list of all the books
+//        assertEquals( , );
+//    }
+
+
 
     @Test
     public void test() {
