@@ -21,7 +21,9 @@ public class Prompter {
     public static char promptForMenuOption() {
         Scanner scanner = new Scanner(System.in);
         String input;
+        String bookInput;
         char usersMenuChoice;
+        char usersBookChoice;
         boolean isAcceptable = false;
 
             do {
@@ -34,13 +36,40 @@ public class Prompter {
                     Library library = new Library();
                     ArrayList<Book> books = library.getInventory();
                     System.out.printf("List of all books: " +
-                                        "\n 1 - %s by %s (%s)" +
-                                        "\n 2 - %s by %s (%s)" +
-                                        "\n 3 - %s by %s (%s)",
-                                        books.get(0).getTitle(), books.get(0).getAuthor(), books.get(0).getYear(),
-                                        books.get(1).getTitle(), books.get(1).getAuthor(), books.get(1).getYear(),
-                                        books.get(2).getTitle(), books.get(2).getAuthor(), books.get(2).getYear()
+                                        "\n 1 - %s" +
+                                        "\n 2 - %s" +
+                                        "\n 3 - %s",
+                                        books.get(0).getTitle(),
+                                        books.get(1).getTitle(),
+                                        books.get(2).getTitle()
                     );
+                    System.out.printf("\n To view the author and publication year of a book, enter its number: ");
+                    bookInput = scanner.nextLine();
+                    usersBookChoice = bookInput.charAt(0);
+
+                        if (usersBookChoice == '1') {
+                            System.out.printf("======== %s ========" +
+                                            "\n author: %s" +
+                                            "\n year: %s",
+                                            books.get(0).getTitle(),
+                                            books.get(0).getAuthor(),
+                                            books.get(0).getYear());
+                        } else if (usersBookChoice == '2') {
+                            System.out.printf("======== %s ========" +
+                                            "\n author: %s" +
+                                            "\n year: %s",
+                                            books.get(1).getTitle(),
+                                            books.get(1).getAuthor(),
+                                            books.get(1).getYear());
+                        } else if (usersBookChoice == '3') {
+                            System.out.printf("======== %s ========" +
+                                            "\n author: %s" +
+                                            "\n year: %s",
+                                    books.get(2).getTitle(),
+                                    books.get(2).getAuthor(),
+                                    books.get(2).getYear());
+                        }
+
                 } else if (usersMenuChoice == '2') {
                     isAcceptable = true;
                     System.exit(0);
