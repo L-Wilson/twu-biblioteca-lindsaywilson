@@ -7,9 +7,9 @@ public class Library {
 
     public Library() {
         ArrayList<Book> listOfBooks = new ArrayList<Book>();
-        listOfBooks.add(new Book("The Grapes of Wrath", "John Steinbeck", "1939"));
-        listOfBooks.add(new Book("Moby Dick", "Herman Melville", "1851"));
-        listOfBooks.add(new Book("Animal Farm", "George Orwell", "1945"));
+        listOfBooks.add(new Book("John Steinbeck", "The Grapes of Wrath", "1939"));
+        listOfBooks.add(new Book("Herman Melville", "Moby Dick", "1851"));
+        listOfBooks.add(new Book("George Orwell", "Animal Farm", "1945"));
         this.inventory = listOfBooks;
     }
 

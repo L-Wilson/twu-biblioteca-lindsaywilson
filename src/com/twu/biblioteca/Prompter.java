@@ -1,4 +1,5 @@
 package com.twu.biblioteca;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Prompter {
@@ -10,7 +11,7 @@ public class Prompter {
     }
 
     public static void displayMenuOptions() {
-        System.out.printf(" ======== Menu ======== \n %s \n %s",
+        System.out.printf(" ======== Menu ======== \n %s  %s",
                 menuOption1,
                 menuOption2
         );
@@ -31,7 +32,15 @@ public class Prompter {
                 if (usersMenuChoice == '1') {
                     isAcceptable = true;
                     Library library = new Library();
-                    library.getInventory();
+                    ArrayList<Book> books = library.getInventory();
+                    System.out.printf("List of all books: " +
+                                        "\n 1 - %s by %s (%s)" +
+                                        "\n 2 - %s by %s (%s)" +
+                                        "\n 3 - %s by %s (%s)",
+                                        books.get(0).getTitle(), books.get(0).getAuthor(), books.get(0).getYear(),
+                                        books.get(1).getTitle(), books.get(1).getAuthor(), books.get(1).getYear(),
+                                        books.get(2).getTitle(), books.get(2).getAuthor(), books.get(2).getYear()
+                    );
                 } else if (usersMenuChoice == '2') {
                     isAcceptable = true;
                     System.exit(0);
