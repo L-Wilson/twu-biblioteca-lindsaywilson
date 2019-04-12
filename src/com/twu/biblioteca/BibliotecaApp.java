@@ -10,13 +10,13 @@ public class BibliotecaApp {
         prompter.displayWelcomeMessage();
         prompter.displayMenuOptions();
         promptForMenuOption();
-        if (prompter.promptForMenuOption() == '1') {
-            Library library = new Library();
-            library.getInventory();
-        }
-        else if (prompter.promptForMenuOption() == '2') {
-            System.exit(0);
-        }
+//        if (prompter.promptForMenuOption() == '1') {
+//            Library library = new Library();
+//            library.getInventory();
+//        }
+//        else if (prompter.promptForMenuOption() == '2') {
+//            System.exit(0);
+//        }
 
 
     }

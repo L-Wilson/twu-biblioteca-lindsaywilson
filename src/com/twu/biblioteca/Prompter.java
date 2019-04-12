@@ -28,17 +28,19 @@ public class Prompter {
                 input = scanner.nextLine();
                 usersMenuChoice = input.charAt(0);
 
-                if (usersMenuChoice == '1' || usersMenuChoice == '2') {
+                if (usersMenuChoice == '1') {
                     isAcceptable = true;
+                    Library library = new Library();
+                } else if (usersMenuChoice == '2') {
+                    isAcceptable = true;
+                    System.exit(0);
                 } else {
-                    System.out.println("Invalid menu option.");
+                    System.out.println("\n Invalid menu option");
                 }
+
             } while (!isAcceptable);
 
         return usersMenuChoice;
     }
-
-
-
 
 }
