@@ -31,6 +31,7 @@ public class Prompter {
                 if (usersMenuChoice == '1') {
                     isAcceptable = true;
                     Library library = new Library();
+                    library.getInventory();
                 } else if (usersMenuChoice == '2') {
                     isAcceptable = true;
                     System.exit(0);
