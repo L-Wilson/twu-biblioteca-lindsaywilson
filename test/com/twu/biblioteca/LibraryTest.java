@@ -28,10 +28,10 @@ public class LibraryTest {
 
         //When:
         ArrayList<Book> books = library.getInventory();
-        books.get(2).getAuthor();
+        assertEquals(3, books.size());
 
         //Then: I want to see the title of the first book
-        assertEquals("George Orwell", "George Orwell");
+        assertEquals("George Orwell", books.get(2).getAuthor());
     }
 
     @Test

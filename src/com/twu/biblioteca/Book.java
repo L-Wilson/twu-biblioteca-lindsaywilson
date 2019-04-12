@@ -4,12 +4,13 @@ public class Book {
         private String author;
         private String title;
         private String year;
-        private boolean isCheckedOut = false;
+        private boolean isCheckedOut;
 
-        public Book(String author, String title, String year) {
+        public Book(String author, String title, String year, boolean isCheckedOut) {
             this.author = author;
             this.title = title;
             this.year = year;
+            this.isCheckedOut = isCheckedOut;
         }
 
         public String getAuthor() {

@@ -46,7 +46,7 @@ public class Prompter {
                     System.out.printf("\n To view the author and publication year of a book, enter its number: ");
                     bookInput = scanner.nextLine();
                     usersBookChoice = bookInput.charAt(0);
-
+//                        displayBookDetails(books, usersMenuChoice);
                         if (usersBookChoice == '1') {
                             System.out.printf("======== %s ========" +
                                             "\n author: %s" +
