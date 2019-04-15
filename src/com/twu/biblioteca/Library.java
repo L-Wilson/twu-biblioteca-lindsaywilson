@@ -18,7 +18,7 @@ public class Library {
         ArrayList<Book> filteredBookList = new ArrayList<Book>();
             for(int index = 0; index < inventory.size(); index++) {
                 Book currentBook = inventory.get(index);
-                if (currentBook.getBookStatus() == false) {
+                if (!currentBook.isCheckedOut()) {
                     filteredBookList.add(currentBook);
                 }
             }

@@ -25,8 +25,10 @@ public class Book {
             return year;
         }
 
-        public boolean getBookStatus() {
-            return isCheckedOut;
+
+        public boolean isCheckedOut() {
+            return isCheckedOut == true;
         }
 
 }
+
